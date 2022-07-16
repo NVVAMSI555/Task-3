@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotel management system</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<center>
+    <h1 style ="color:rgb(161, 185, 74)";><b><u>Hotel Management System</u></b></h1>
+    <form >
+      
+<table border="8">
+    
+<thead>
+<tr>
+<th>Customer Name</th>
+<td><input type="text" name="customername" id="customername" required ></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Date Of CheckIn</th>
+<td><input type="date" name="idproof" id="idproof" required></td>
+</tr>
+<tr>
+<th>Room No</th>
+<td><input type="text" name="RoomNo" id="RoomNo" required></td>
+</tr>
+<tr>
+<th>Mobile No</th>
+<td><input type="text" name="Mobile No" id="Mobile No" required></td>
+</tr>
+<tr>
+<th>Address</th>
+<td><input type="text" name="Address" id="Address" required></td>
+</tr>
+<tr>
+
+<tr id="btna">
+<td colspan="5"><input type="button" name="button"
+
+id="btn" value="ADD" onclick="AddRow()"></td>
+</tr>
+</tbody>
+</table>
+    </form>
+<table border="8" id="show">
+<thead>
+<tr>
+<th>Customer Name</th>
+<th>Date Of CheckIn</th>
+<th>Room No</th>
+<th>Mobile No</th>
+<th>Address</th>
+
+</tr>
+</thead>
+</table>
+<div><h4><b><i><p style="color:rgb(20, 3, 11)" /></i></h4><p> <h4>&copy; all rights reserved</i></div></b></h4>
+<div><h4><b><i> Made by N.V VAMSI</i></b></h4></div>
+</center>
+<script>
+var list1 = [];
+var list2 = [];
+var list3 = [];
+var list4 = [];
+var list5 = [];
+var n = 1;
+var x = 0;
+function AddRow(){
+var AddRown = document.getElementById('show');
+var NewRow = AddRown.insertRow(n);
+list1[x] = document.getElementById("customername").value;
+list2[x] = document.getElementById("idproof").value;
+list3[x] = document.getElementById("RoomNo").value;
+list4[x] = document.getElementById("Mobile No").value;
+list5[x] = document.getElementById("Address").value;
+var cel1 = NewRow.insertCell(0);
+var cel2 = NewRow.insertCell(1);
+var cel3 = NewRow.insertCell(2);
+var cel4 = NewRow.insertCell(3);
+var cel5 = NewRow.insertCell(4);
+cel1.innerHTML = list1[x];
+cel2.innerHTML = list2[x];
+cel3.innerHTML = list3[x];
+cel4.innerHTML = list4[x];
+cel5.innerHTML = list5[x];
+n++;
+x++;
+}
+</script>
+</body>
+</html>
